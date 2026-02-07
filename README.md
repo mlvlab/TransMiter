@@ -45,7 +45,7 @@ We use [PromptSRC](https://github.com/muzairkhattak/PromptSRC) for fine-tuning t
 ### 1. Adaptation Knowledge Extraction
 
 ```bash
-bash run_scripts/base2novel/knowledge_extraction/0514_base2novel_ket_only_promptsrc.sh \
+bash run_scripts/base2novel/knowledge_extraction/ket.sh \
     ViT-B-16 \ # source model
     "['promptsrc']" \ # source fine-tuning strategy
     dtd \ # dataset
@@ -55,7 +55,7 @@ bash run_scripts/base2novel/knowledge_extraction/0514_base2novel_ket_only_prompt
 ### 2. Adaptation Knowledge Transfer
 
 ```bash
-bash run_scripts/base2novel/transfer/0514_base2novel_transfer_only_promptsrc.sh \
+bash run_scripts/base2novel/knowledge_transfer/transfer.sh \
     ViT-B-16 \ # source model
     ViT-L-14 \ # target model
     "['promptsrc']" \ # source fine-tuning strategy
